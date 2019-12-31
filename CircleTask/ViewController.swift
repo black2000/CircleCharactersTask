@@ -42,24 +42,15 @@ class ViewController: UIViewController {
     var alphabetArray : [Character] = ["a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o", "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z"]
     
     
-//    var tenWordArray = [
-//        "razzmatazz" ,
-//        "dizzyingly" ,
-//        "puzzlingly" ,
-//        "squeezebox" ,
-//        "unmuzzling"
-//    ]
-    
     var tenWordArray = [
-        "abc" ,
-        "abc" ,
-        "abc" ,
-        "abc" ,
-        "abc"
+        "razzmatazz" ,
+        "dizzyingly" ,
+        "puzzlingly" ,
+        "squeezebox" ,
+        "unmuzzling"
     ]
     
-    
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         

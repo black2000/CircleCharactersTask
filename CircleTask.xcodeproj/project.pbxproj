@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		B516B2F223B94CDE007BB3B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B516B2F023B94CDE007BB3B0 /* Main.storyboard */; };
 		B516B2F423B94CEC007BB3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B516B2F323B94CEC007BB3B0 /* Assets.xcassets */; };
 		B516B2F723B94CEC007BB3B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B516B2F523B94CEC007BB3B0 /* LaunchScreen.storyboard */; };
-		B516B2FF23B962A7007BB3B0 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B516B2FE23B962A7007BB3B0 /* Circle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +25,6 @@
 		B516B2F323B94CEC007BB3B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B516B2F623B94CEC007BB3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B516B2F823B94CEC007BB3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B516B2FE23B962A7007BB3B0 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		EE2D14E17AA30A365F933B36 /* Pods-CircleTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleTask.debug.xcconfig"; path = "Target Support Files/Pods-CircleTask/Pods-CircleTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +46,6 @@
 				EE2D14E17AA30A365F933B36 /* Pods-CircleTask.debug.xcconfig */,
 				976E6383C4B83330A1D9B34A /* Pods-CircleTask.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,7 +76,6 @@
 				B516B2F323B94CEC007BB3B0 /* Assets.xcassets */,
 				B516B2F523B94CEC007BB3B0 /* LaunchScreen.storyboard */,
 				B516B2F823B94CEC007BB3B0 /* Info.plist */,
-				B516B2FE23B962A7007BB3B0 /* Circle.swift */,
 			);
 			path = CircleTask;
 			sourceTree = "<group>";
@@ -207,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B516B2FF23B962A7007BB3B0 /* Circle.swift in Sources */,
 				B516B2EF23B94CDE007BB3B0 /* ViewController.swift in Sources */,
 				B516B2ED23B94CDE007BB3B0 /* AppDelegate.swift in Sources */,
 			);
