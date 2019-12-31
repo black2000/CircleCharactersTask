@@ -112,11 +112,23 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="iFI-Cw-G3F">
+                                <rect key="frame" x="265" y="34" width="83" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="Qa7-ee-LlG"/>
+                                    <constraint firstAttribute="height" constant="46" id="jSD-Hh-xqZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bcH-tX-OZ3" firstAttribute="top" secondItem="ThJ-4o-iUL" secondAttribute="bottom" constant="8" id="CdN-lf-Ro0"/>
                             <constraint firstItem="7lH-cc-X0B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NmF-Fi-n3L"/>
+                            <constraint firstItem="iFI-Cw-G3F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="OjQ-fx-6yE"/>
+                            <constraint firstItem="iFI-Cw-G3F" firstAttribute="leading" secondItem="7lH-cc-X0B" secondAttribute="trailing" constant="19.5" id="Rxa-fm-0nd"/>
                             <constraint firstItem="ALc-ir-Vkv" firstAttribute="centerX" secondItem="KfT-xn-BCy" secondAttribute="centerX" id="SWR-gy-IXS"/>
                             <constraint firstItem="bcH-tX-OZ3" firstAttribute="centerX" secondItem="ThJ-4o-iUL" secondAttribute="centerX" id="U5P-01-1uc"/>
                             <constraint firstItem="ThJ-4o-iUL" firstAttribute="top" secondItem="ALc-ir-Vkv" secondAttribute="bottom" constant="25" id="WL9-uF-p5i"/>
@@ -133,10 +145,11 @@
                         <outlet property="clockWisebtn" destination="AwA-Ia-rB3" id="IFK-Cq-0jQ"/>
                         <outlet property="counterClockWiseBtn" destination="31G-ZW-phk" id="B12-Bt-ml2"/>
                         <outlet property="inputLbl" destination="ihI-VM-Vby" id="REx-Ly-hoK"/>
-                        <outlet property="numberOfRotations" destination="G0A-AZ-Y4q" id="Vz9-iS-Q0T"/>
+                        <outlet property="numberOfMinimumRotationsLbl" destination="G0A-AZ-Y4q" id="Sog-pj-LH6"/>
+                        <outlet property="numberOfUserRotationsLbl" destination="iFI-Cw-G3F" id="vAc-bC-PJh"/>
                         <outlet property="outputLbl" destination="kCv-8Y-o2E" id="7F9-w8-fF7"/>
                         <outlet property="printBtn" destination="oSQ-Az-Ld7" id="hyM-bm-s0p"/>
-                        <outlet property="selectedCharacter" destination="rsW-ra-Rjy" id="Pkb-jG-ApV"/>
+                        <outlet property="selectedCharacter" destination="rsW-ra-Rjy" id="cMp-nj-iMH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

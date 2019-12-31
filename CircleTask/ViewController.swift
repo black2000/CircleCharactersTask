@@ -15,27 +15,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var counterClockWiseBtn: UIButton!
     @IBOutlet weak var clockWisebtn: UIButton!
     
-    
     @IBOutlet weak var inputLbl: UILabel!
     @IBOutlet weak var outputLbl: UILabel!
     @IBOutlet weak var circleImage: UIImageView!
     
     @IBOutlet weak var selectedCharacter: UILabel!
+    @IBOutlet weak var numberOfMinimumRotationsLbl: UILabel!
     
-    @IBOutlet weak var numberOfRotations: UILabel!
+    @IBOutlet weak var numberOfUserRotationsLbl: UILabel!
     
     
+    
+    var inputWord = ""
+    var userCharacterIndex = 0
+    var character : Character = "a"
+    var numberOfUserRotation = 0
+    var outputWord = ""
     
     var minimumNumberOfRotations = 0
-    var inputWord = ""
-    var index = 0
-    var character : Character = "a"
-    var rotation = 0
-    var outputWord = ""
-    var result = ""
-    
-    
-    var biggerIndex = 0
+    var globalIndex = 0
     var clockwiseIndex = 0
     var counterClockwiseIndex = 0
    
@@ -44,26 +42,24 @@ class ViewController: UIViewController {
     var alphabetArray : [Character] = ["a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o", "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z"]
     
     
+//    var tenWordArray = [
+//        "razzmatazz" ,
+//        "dizzyingly" ,
+//        "puzzlingly" ,
+//        "squeezebox" ,
+//        "unmuzzling"
+//    ]
+    
     var tenWordArray = [
-        "razzmatazz" ,
-        "dizzyingly" ,
-        "puzzlingly" ,
-        "squeezebox" ,
-        "unmuzzling"
+        "abc" ,
+        "abc" ,
+        "abc" ,
+        "abc" ,
+        "abc"
     ]
     
     
-//    var tenWordArray = [
-//        "abc" ,
-//        "abc" ,
-//        "abc" ,
-//        "abc" ,
-//        "abc"
-//    ]
-    
-    
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,24 +70,24 @@ class ViewController: UIViewController {
         
         if isClockWise {
             
-            if index == alphabetArray.count - 1 {
-               index = 0
+            if userCharacterIndex == alphabetArray.count - 1 {
+               userCharacterIndex = 0
             }else {
-               index += 1
+               userCharacterIndex += 1
             }
             
         }else {
-            if index == 0 {
-               index = alphabetArray.count - 1
+            if userCharacterIndex == 0 {
+               userCharacterIndex = alphabetArray.count - 1
             }else {
-               index -= 1
+               userCharacterIndex -= 1
             }
         }
         
-       character = alphabetArray[index]
+       character = alphabetArray[userCharacterIndex]
        selectedCharacter.text = "selected Charater :\(character)"
-       rotation += 1
-       numberOfRotations.text = "number of rotations : \(rotation)"
+       numberOfUserRotation += 1
+       numberOfUserRotationsLbl.text = "number of user rotations : \(numberOfUserRotation)"
     }
     
     
@@ -104,11 +100,11 @@ class ViewController: UIViewController {
             clockWisebtn.isEnabled = false
             
             
-            if outputWord == inputWord {
+            if outputWord == inputWord && numberOfUserRotation == minimumNumberOfRotations  {
                 
-                showAlert(title: "won", message: "your rotation number is : \(rotation)")
+                showAlert(title: "won", message: "your rotation number is : \(numberOfUserRotation) and recommeded minimum number of rotation is \(minimumNumberOfRotations)")
             }else {
-                showAlert(title: "lost", message: "your rotation number is : \(rotation)")
+                showAlert(title: "lost", message: "your rotation number is : \(numberOfUserRotation) and recommeded minimum number  of rotation should be \(minimumNumberOfRotations) or unmatched words")
             }
             
             
@@ -142,17 +138,23 @@ class ViewController: UIViewController {
     func reset() {
         
         character = "a"
-        rotation = 0
+        numberOfUserRotation = 0
         outputWord = ""
-        
-        outputLbl.text = "Output : \(outputWord)"
         inputWord = tenWordArray.randomElement()!
         minimumNumberOfRotations = calculateMinimumNumberOfRotation(inputWord: inputWord)
+        globalIndex = 0
+        
+        outputLbl.text = "Output : \(outputWord)"
         inputLbl.text = "Input : \(inputWord)"
+        
         selectedCharacter.text = "selected Character :\(character)"
-        numberOfRotations.text = " minimun number of rotations : \(minimumNumberOfRotations)"
-            self.circleImage.image = #imageLiteral(resourceName: "charsWheel")
+        numberOfMinimumRotationsLbl.text = " minimun number of rotations : \(minimumNumberOfRotations)"
+        
+        numberOfUserRotationsLbl.text = "number of user rotations : \(numberOfUserRotation)"
+        
+        self.circleImage.image = #imageLiteral(resourceName: "charsWheel")
         circleImage.transform = CGAffineTransform(rotationAngle: 0)
+        
         printBtn.isEnabled = true
         counterClockWiseBtn.isEnabled = true
         clockWisebtn.isEnabled = true
@@ -176,13 +178,13 @@ class ViewController: UIViewController {
             
             if numOfRotationClockwise > numOfRotationCounterClockwise {
                 totalRotations += numOfRotationCounterClockwise
-                biggerIndex = counterClockwiseIndex
+                globalIndex = counterClockwiseIndex
             }else if numOfRotationClockwise < numOfRotationCounterClockwise {
                  totalRotations += numOfRotationClockwise
-                 biggerIndex = clockwiseIndex
+                 globalIndex = clockwiseIndex
             }else {
                  totalRotations += numOfRotationClockwise
-                 biggerIndex = clockwiseIndex
+                 globalIndex = clockwiseIndex
             }
         }
         
@@ -193,7 +195,7 @@ class ViewController: UIViewController {
     func calculateNumberOfRotataionsClockWise(char : Character ) -> Int {
         
         var rotation = 0
-        clockwiseIndex = biggerIndex
+        clockwiseIndex = globalIndex
         
         
         repeat {
@@ -223,7 +225,7 @@ class ViewController: UIViewController {
     func calculateNumberOfRotataionsCounterClockWise(char : Character ) -> Int {
         
         var rotation = 0
-        counterClockwiseIndex = biggerIndex
+        counterClockwiseIndex = globalIndex
         
         repeat {
             
