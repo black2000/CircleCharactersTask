@@ -1,0 +1,16 @@
+PODS:
+  - TTFortuneWheel (0.1.8)
+
+DEPENDENCIES:
+  - TTFortuneWheel (~> 0.1.5)
+
+SPEC REPOS:
+  trunk:
+    - TTFortuneWheel
+
+SPEC CHECKSUMS:
+  TTFortuneWheel: ed40c860e88ae5da8abad77da4c616932c6a6d74
+
+PODFILE CHECKSUM: 690036095b5558819003ee7e156e7b22b6cc0772
+
+COCOAPODS: 1.8.4

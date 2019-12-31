@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircleTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KfT-xn-BCy">
+                                <rect key="frame" x="16" y="120" width="343" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="C0j-Cq-0yK"/>
+                                    <constraint firstAttribute="height" constant="320" id="g1e-fd-Uwc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="7lH-cc-X0B">
+                                <rect key="frame" x="129.5" y="34" width="116" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="XJO-HD-qKE"/>
+                                    <constraint firstAttribute="width" constant="116" id="k9K-ef-tsj"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ALc-ir-Vkv">
+                                <rect key="frame" x="7.5" y="480" width="360" height="27"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31G-ZW-phk">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="27"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Counter Clock Wise">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="counterClockWiseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u4E-ud-RuU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSQ-Az-Ld7">
+                                        <rect key="frame" x="124" y="0.0" width="112" height="27"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Print">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PrintBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3VR-ar-Lu3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwA-Ia-rB3">
+                                        <rect key="frame" x="248" y="0.0" width="112" height="27"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Clock Wise">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clockWiseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lT5-pz-hdT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ThJ-4o-iUL">
+                                <rect key="frame" x="14" y="532" width="347" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihI-VM-Vby">
+                                        <rect key="frame" x="0.0" y="0.0" width="347" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="Enp-wN-XZd"/>
+                                            <constraint firstAttribute="width" priority="750" constant="300" id="Stv-hM-8uh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCv-8Y-o2E">
+                                        <rect key="frame" x="0.0" y="34" width="347" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Cjv-DZ-7oe"/>
+                                            <constraint firstAttribute="width" constant="347" id="Gkn-ts-Elj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="bcH-tX-OZ3">
+                                <rect key="frame" x="149" y="606" width="77" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsW-ra-Rjy">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="roatations :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0A-AZ-Y4q">
+                                        <rect key="frame" x="0.0" y="29" width="77" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bcH-tX-OZ3" firstAttribute="top" secondItem="ThJ-4o-iUL" secondAttribute="bottom" constant="8" id="CdN-lf-Ro0"/>
+                            <constraint firstItem="7lH-cc-X0B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NmF-Fi-n3L"/>
+                            <constraint firstItem="ALc-ir-Vkv" firstAttribute="centerX" secondItem="KfT-xn-BCy" secondAttribute="centerX" id="SWR-gy-IXS"/>
+                            <constraint firstItem="bcH-tX-OZ3" firstAttribute="centerX" secondItem="ThJ-4o-iUL" secondAttribute="centerX" id="U5P-01-1uc"/>
+                            <constraint firstItem="ThJ-4o-iUL" firstAttribute="top" secondItem="ALc-ir-Vkv" secondAttribute="bottom" constant="25" id="WL9-uF-p5i"/>
+                            <constraint firstItem="7lH-cc-X0B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="WMa-yO-fHP"/>
+                            <constraint firstItem="ALc-ir-Vkv" firstAttribute="top" secondItem="KfT-xn-BCy" secondAttribute="bottom" constant="40" id="jGe-bB-HB7"/>
+                            <constraint firstItem="KfT-xn-BCy" firstAttribute="top" secondItem="7lH-cc-X0B" secondAttribute="bottom" constant="30" id="lz4-f9-XlE"/>
+                            <constraint firstItem="KfT-xn-BCy" firstAttribute="centerX" secondItem="7lH-cc-X0B" secondAttribute="centerX" id="qBJ-DW-yEy"/>
+                            <constraint firstItem="ThJ-4o-iUL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zZZ-WL-vnE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="circleImage" destination="KfT-xn-BCy" id="BQS-wl-TQi"/>
+                        <outlet property="clockWisebtn" destination="AwA-Ia-rB3" id="IFK-Cq-0jQ"/>
+                        <outlet property="counterClockWiseBtn" destination="31G-ZW-phk" id="B12-Bt-ml2"/>
+                        <outlet property="inputLbl" destination="ihI-VM-Vby" id="REx-Ly-hoK"/>
+                        <outlet property="numberOfRotations" destination="G0A-AZ-Y4q" id="Vz9-iS-Q0T"/>
+                        <outlet property="outputLbl" destination="kCv-8Y-o2E" id="7F9-w8-fF7"/>
+                        <outlet property="printBtn" destination="oSQ-Az-Ld7" id="hyM-bm-s0p"/>
+                        <outlet property="selectedCharacter" destination="rsW-ra-Rjy" id="Pkb-jG-ApV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="70.614692653673174"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow" width="49" height="81"/>
+    </resources>
+</document>
